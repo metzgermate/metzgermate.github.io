@@ -1,0 +1,64 @@
+body {
+    background-image: url('../images/background2.png');
+    background-repeat: no-repeat;
+    background-size: cover; /* It will cover the entire area */
+    background-position: center center;
+    background-attachment: fixed; /* This will create a parallax-like effect */
+    font-family: 'Merriweather', sans-serif;
+    min-height: 100vh; /* This ensures that the body is at least the height of the viewport */
+}
+
+@media (max-width: 768px) {
+    body {
+        background-attachment: scroll; /* On mobile devices, fixed backgrounds can cause issues, so we revert to scroll */
+    }
+}
+
+
+a.nav-link {
+    text-align: center;
+    border-bottom: 1px solid rgb(139, 118, 0);
+    margin: 1rem
+}
+
+.navbar-image {
+    height: 20rem; /* Adjust the height as needed */
+    width: 100%; /* This will maintain the aspect ratio */
+    object-fit: contain; /* This ensures that the image is scaled correctly within the dimensions */
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+}
+
+.image-crop {
+    position: relative;
+    overflow: hidden;
+    height: 250px; /* The height of the visible area you want for the image */
+  }
+  
+  .image-crop img {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-50%);
+    height: auto; /* This will retain the original aspect ratio of the image */
+  }
+
+  .text-justify {
+    text-align: justify;
+  }
+
+
+  footer {
+    position: relative; /* Default positioning */
+    height: 50px; /* Set footer height */
+    width: 100%; /* Full width */
+    background-color: #33333373; /* Footer color */
+    color: white; /* Text color */
+    text-align: center; /* Centering text */
+    line-height: 50px; /* Center text vertically */
+
+  }
